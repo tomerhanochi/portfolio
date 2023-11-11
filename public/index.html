@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/tailwind.min.css">
+    <script src="/static/js/htmx.min.js"></script>
+    <title>
+        Portfolio
+    </title>
+</head>
+<body class="bg-neutral-800">
+    <div class="flex flex-col">
+        <div class="bg-sky-600 flex flex-row justify-end">
+            <div class="font-kanit font-medium group py-2 px-3 text-lg sm:text-3xl text-neutral-900 transition" hx-get="/sections/about.html" hx-target="#content">
+                About
+                <div class="bg-neutral-900 block duration-300 h-1 max-w-0 group-hover:max-w-full mx-auto transition-all"></div>
+            </div>
+            <div  class="font-kanit font-medium group py-2 px-3 text-lg sm:text-3xl text-neutral-900 transition" hx-get="/sections/skills.html" hx-target="#content">
+                Skills
+                <div class="bg-neutral-900 block duration-300 h-1 max-w-0 group-hover:max-w-full mx-auto transition-all"></div>
+            </div>
+            <div  class="font-kanit font-medium group py-2 px-3 text-lg sm:text-3xl text-neutral-900 transition" hx-get="/sections/projects.html" hx-target="#content">
+                Projects
+                <div class="bg-neutral-900 block duration-300 h-1 max-w-0 group-hover:max-w-full mx-auto transition-all"></div>
+            </div>
+            <div  class="font-kanit font-medium group py-2 px-3 text-lg sm:text-3xl text-neutral-900 transition" hx-get="/sections/contact.html" hx-target="#content">
+                Contact
+                <div class="bg-neutral-900 block duration-300 h-1 max-w-0 group-hover:max-w-full mx-auto transition-all"></div>
+            </div>
+        </div>
+        <div hx-get="/sections/about.html" hx-trigger="load" id="content">
+        </div>
+    </div>
+</body>
+</html>
